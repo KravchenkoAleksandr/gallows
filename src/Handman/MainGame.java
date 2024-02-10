@@ -1,9 +1,9 @@
-package Hangman;
+package Handman;
 
 import java.util.*;
 
-import static Hangman.GamingMethods.*;
-import static Hangman.PrintError.*;
+import static Handman.GamingMethods.*;
+import static Handman.PrintError.*;
 
 public class MainGame {
     static List<String> secretWord = new ArrayList<>();

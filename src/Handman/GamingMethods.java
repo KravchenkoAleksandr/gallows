@@ -1,10 +1,10 @@
-package Hangman;
+package Handman;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-import static Hangman.PrintError.*;
+import static Handman.PrintError.*;
 
 public class GamingMethods {
     public static Scanner inputPlayer = new Scanner(System.in);
@@ -19,7 +19,6 @@ public class GamingMethods {
             while (scanner.hasNextLine()) {
                 list.add(scanner.nextLine());
             }
-            //сначала этот метод был разделен на 2 метода
             Random random = new Random();
             String string = list.get(random.nextInt(list.size()));
             secretWord.add(string);
@@ -30,8 +29,8 @@ public class GamingMethods {
     }
 
     //метод преобразующий секретное слово в List<Character>
-    public static List<Character> changeWord(List list) {
-        String word = (String) list.get(0);
+    public static List<Character> changeWord(List<String> list) {
+        String word = list.get(0);
         char[] wordSymbol = word.toCharArray();
         List<Character> wordPlaySymbol = new ArrayList<>();
         for (char c : wordSymbol) {
@@ -95,7 +94,7 @@ public class GamingMethods {
     }
 
     //метод показывающий количество ошибок и ошибочные буквы
-    public static Set<Character> printHowManyError(Set lettersError, char letter) {
+    public static Set<Character> printHowManyError(Set<Character>lettersError, char letter) {
         lettersError.add(letter);
         System.out.println("Количетсво ошибок: " + ++error + " " + lettersError);
         System.out.println(String.format("В слове нет буквы: %s ", letter));
