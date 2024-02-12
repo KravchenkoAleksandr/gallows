@@ -1,4 +1,4 @@
-package Handman;
+package hangman;
 
 public class PrintError {
     //методы выводящие состояние виселицы

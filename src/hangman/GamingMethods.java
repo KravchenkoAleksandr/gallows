@@ -1,10 +1,10 @@
-package Handman;
+package hangman;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-import static Handman.PrintError.*;
+import static hangman.PrintError.*;
 
 public class GamingMethods {
     public static Scanner inputPlayer = new Scanner(System.in);
@@ -94,7 +94,7 @@ public class GamingMethods {
     }
 
     //метод показывающий количество ошибок и ошибочные буквы
-    public static Set<Character> printHowManyError(Set<Character>lettersError, char letter) {
+    public static Set<Character> printHowManyError(Set<Character> lettersError, char letter) {
         lettersError.add(letter);
         System.out.println("Количетсво ошибок: " + ++error + " " + lettersError);
         System.out.println(String.format("В слове нет буквы: %s ", letter));

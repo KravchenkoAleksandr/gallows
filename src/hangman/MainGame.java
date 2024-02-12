@@ -1,9 +1,9 @@
-package Handman;
+package hangman;
 
 import java.util.*;
 
-import static Handman.GamingMethods.*;
-import static Handman.PrintError.*;
+import static hangman.GamingMethods.*;
+import static hangman.PrintError.*;
 
 public class MainGame {
     static List<String> secretWord = new ArrayList<>();
@@ -12,10 +12,7 @@ public class MainGame {
     static Set<Character> lettersError = new LinkedHashSet<>();
 
     public static void main(String[] args) {
-        gamePlay();
-    }
 
-    public static void gamePlay() {
         String inputContinue;
         do {
             secretWord = getSecretWord(secretWord);
