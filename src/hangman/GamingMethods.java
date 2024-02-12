@@ -126,7 +126,7 @@ public class GamingMethods {
     }
 
     //метод,проверяющий повторное введение буквы
-    public static boolean printRepeatLetter(List<Character> openLetterWord, Set<Character> lettersError, char letter) {
+    public static boolean checkRepeatLetter(List<Character> openLetterWord, Set<Character> lettersError, char letter) {
         if (openLetterWord.contains(letter) || lettersError.contains(letter)) {
             System.out.println("Вы уже вводили букву: " + letter + "\nВведите другую букву!");
             return true;
