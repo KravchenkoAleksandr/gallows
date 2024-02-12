@@ -35,7 +35,7 @@ public class MainGame {
                         do {
                             letterPlayer = inputLetter();
 
-                        } while (printRepeatLetter(openLetterWord, lettersError, letterPlayer));
+                        } while (checkRepeatLetter(openLetterWord, lettersError, letterPlayer));
                         if (compareInputLetterPlayer(symbolsWord, letterPlayer)) {
                             openLetter(symbolsWord, openLetterWord, letterPlayer);
                             System.out.println("Слово: " + openLetterWord);
